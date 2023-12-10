@@ -1,1 +1,26 @@
-<p>homepage works!</p>
+<header>
+  <h1>Lea's Coffee Game</h1>
+</header>
+<main class="wrapper flow">
+  <div class="grid">
+    <app-resource-tile *ngFor="let item of (resources$ | async | keyvalue)"
+      [title]="item.key"
+      [amount]="item.value">
+    </app-resource-tile>
+  </div>
+
+  <div class="grid">
+    <div class="tile | center flow" *ngFor="let facility of (facilities$ | async | keyvalue)">
+      <h2>{{ facility.key }}</h2>
+      <div>Level {{ facility.value}}</div>
+
+      <button (click)="work(facility.key)"> work </button>
+      <button (click)="upgrade(facility.key)"> upgrade </button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <h2>Cycle: {{ cycle$ | async }}</h2>
+    <button (click)="sellCoffee()">sell coffee</button>
+  </div>
+</main>

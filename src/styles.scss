@@ -1,1 +1,9 @@
-@import 'css/reset';
+@import 'css/config/reset';
+@import 'css/config/global';
+
+@import 'css/components/tile';
+
+@import 'css/utils/center';
+@import 'css/utils/flow';
+@import 'css/utils/wrapper';
+@import 'css/utils/grid';

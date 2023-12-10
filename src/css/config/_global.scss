@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--bg, #222);
+  color: var(--fg, #fff);
+  min-height: 100dvh;
+  min-height: 100vh;
+}
+
+header, footer {
+  padding: 1rem;
+  background: var(--header-bg, #426);
+  color: #fff;
+}
+
+main {
+  flex: 1;
+  margin-block-start: 1rem;
+}

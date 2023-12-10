@@ -1,11 +1,12 @@
-export interface Inventory {
-  cash: number;
-  water: number;
-  bean: number;
-  plants: number;
-  roastedBeans: number;
-  groundCoffee: number;
-  coffee: number;
+export enum RESOURCE {
+  cash = 'Cash',
+  water = 'Water',
+  bean ='Coffee Bean',
+  roastedBean = 'Roasted Bean',
+  groundCoffee = 'Ground Coffee',
+  coffee = 'Coffee',
+};
 
-  [prop: string]: any;
+export type Inventory = {
+  [key in RESOURCE]: number;
 }

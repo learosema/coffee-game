@@ -3,7 +3,8 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideStore } from '@ngrx/store';
+import { gameReducer } from './state/game/game.reducer';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideStore()]
+  providers: [provideRouter(routes), provideStore({game: gameReducer})]
 };
