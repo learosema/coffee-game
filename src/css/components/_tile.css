@@ -3,4 +3,9 @@
   padding: 1rem;
   background: var(--tile-bg, #444);
   color: #fff;
+
+}
+
+.tile:has(button):not(:has(button:not(:disabled))) {
+  opacity: 0.5;
 }
