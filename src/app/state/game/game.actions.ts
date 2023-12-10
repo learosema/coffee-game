@@ -1,12 +1,12 @@
 import { createActionGroup, emptyProps, props } from "@ngrx/store";
+import { FACILITY } from "../../models/facilities.model";
 
-const gameActions = createActionGroup({
+export const gameActions = createActionGroup({
   source: 'Game',
   events: {
-    'Buy Plant': emptyProps(),
-    'Roast Bean': emptyProps(),
-    'Grind Coffee': emptyProps(),
-    'Brew Coffee': emptyProps(),
-    'Next Cycle': emptyProps(),
+    upgradeFacility: props<{facility: string}>(),
+    work: props<{facility: string}>(),
+    sellCoffee: emptyProps(),
+    nextCycle: emptyProps(),
   }
 });

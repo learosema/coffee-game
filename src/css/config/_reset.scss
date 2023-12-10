@@ -1,0 +1,8 @@
+
+:where(*) {
+  margin: 0;
+}
+
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
