@@ -14,13 +14,13 @@
       <h2>{{ facility.key }}</h2>
       <div>Level {{ facility.value}}</div>
 
-      <button (click)="work(facility.key)"> work </button>
-      <button (click)="upgrade(facility.key)"> upgrade </button>
+      <button (click)="work(facility.key)" [disabled]="!(canWork(facility.key) | async)"> work </button>
+      <button (click)="upgrade(facility.key)" [disabled]="!(canUpgrade() | async)"> upgrade </button>
     </div>
   </div>
 
   <div class="grid">
     <h2>Cycle: {{ cycle$ | async }}</h2>
-    <button (click)="sellCoffee()">sell coffee</button>
+    <button [disabled]="!(canSell() | async)" (click)="sellCoffee()">sell coffee</button>
   </div>
 </main>
